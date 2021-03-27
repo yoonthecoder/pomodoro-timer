@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro Timer - Let's Study! </title>
+</head>
+<body>
+    <div class="container">
+        <div class="tab">
+            <span class="tab-item tab-active pomodoro-tab">pomodoro</span>
+            <span class="tab-item shortbreak-tab">short break</span>
+            <span class="tab-item longbreak-tab">long break</span>
+            <div class="setting-btn">
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+      
+        <div class="timer">
+            <span class="timer-time">25:00</span>
+            <div class="timer-btn timer-btn-blue"><i class="fas fa-pause"></i></div>
+            <!-- <i class="fas fa-stop"></i> -->
+        </div>
+        <div class="quote-container">
+            <span class="quote"></span>
+            <span class="quote-by"></span>
+        </div>
+        <div class="settings-modal">
+            <div class="settings-above">
+                <h1>Settings</h1>
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <div class="settings-time">
+                <h3 class="settings-heading">time (minutes)</h3>
+                <div class="settings-time-items">
+                    <div class="settings-time-item settings-time-pom"><label for="pomodoro">Pomodoro</label><input type="number" id="pomodoro" placeholder="25"></div>
+                    <div class="settings-time-item settings-time-shortbreak"><label for="shortbreak">Short Break</label><input type="number" id="shortbreak" placeholder="5"></div>
+                    <div class="settings-time-item settings-time-longbreak"><label for="longbreak">Long Break</label><input type="number" id="longbreak" placeholder="15"></div>
+                </div>    
+            </div>
+            <div class="settings-colors">
+                <h3 class="settings-heading">theme colours</h3>
+                <div class="settings-color-items">
+                    <div class="settings-color-item color-item-blue"><i class="fas fa-check checked"></i></div>
+                    <div class="settings-color-item color-item-pink"><i class="fas fa-check"></i></div>
+                    <div class="settings-color-item color-item-orange"><i class="fas fa-check"></i></div>
+                </div>
+            </div>
+            <div class="settings-btn-container">
+                <div class="settings-btn">APPLY</div>
+            </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
