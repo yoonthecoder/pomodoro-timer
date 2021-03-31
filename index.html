@@ -10,7 +10,7 @@
     crossorigin="anonymous"
   />
     <link rel="stylesheet" href="style.css">
-    <title>Pomodoro Timer - Let's Study! </title>
+    <title>Pomodoro Timer ⏱️ - Let's Study! </title>
 </head>
 <body>
     <div class="container">
@@ -23,15 +23,37 @@
             </div>
         </div>
       
-        <div class="timer">
-            <span class="timer-time">25:00</span>
-            <div class="timer-btn timer-btn-blue"><i class="fas fa-pause"></i></div>
+        <div class="timer-container">
+            <div class="timer">
+                <div class="timer-time timer-minutes"></div>
+                <div class="timer-time timer-colon">:</div>
+                <div class="timer-time timer-seconds"></div>
+                <audio src="bell.mp3"></audio>
+                <svg class="progress-ring" width="450" height="450">
+                    <circle class="progress-ring-circle"
+                            stroke-width="12"
+                            fill="transparent"
+                            r="220"
+                            cx="225"
+                            cy="225"
+                    />
+                </svg>    
+            </div>
+
+            <div class="timer-btn-container">
+                <div class="timer-btn play-btn" ><i id="play-btn" class="fas fa-play"></i></div>
+                <div class="timer-btn reset-btn"><i class="fas fa-redo"></i></div>
             <!-- <i class="fas fa-stop"></i> -->
         </div>
+                
+        </div>
+       
         <div class="quote-container">
             <span class="quote"></span>
             <span class="quote-by"></span>
         </div>
+
+        <!------------- Settings Modal -------------->
         <div class="settings-modal">
             <div class="settings-above">
                 <h1>Settings</h1>

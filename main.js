@@ -1,8 +1,63 @@
-
 // Tab options 
 $('.tab span').click(function(e){
   $('.tab-item').removeClass('tab-active');
   $(e.currentTarget).addClass('tab-active');
+})
+
+// Timer 
+var minutes = 25;
+var seconds = "00";
+
+$('.timer-minutes').html(minutes);
+$('.timer-seconds').html(seconds);
+
+// Start the timer
+function toPauseBtn() {
+  $('#play-btn').removeClass('fa-play').addClass('fa-stop');
+}
+
+function start() {
+  minutes = 24;
+  seconds = 59;
+
+  $('.timer-minutes').html(minutes);
+  $('.timer-seconds').html(seconds);
+
+  var minutes_interval = setInterval(minutesTimer,60000);
+  var seconds_interval = setInterval(secondsTimer,1000);
+
+  function minutesTimer() {
+    minutes = minutes - 1;
+    $('.timer-minutes').html(minutes);
+  }
+
+  function secondsTimer() {
+    seconds = seconds - 1;
+    $('.timer-seconds').html(seconds);
+    
+    if(seconds < 1) {
+      if (minutes < 1) {
+        clearInterval(minutes_interval);
+        clearInterval(seconds_interval);
+      }
+      seconds = 60;
+    }
+  }
+}
+
+  $('.play-btn').click(function(){
+      start();
+  });
+
+// Pause the timer
+function toStartBtn() {
+  $('#play-btn').removeClass('fa-stop').addClass('fa-play');
+}
+
+// Reset the timer
+$('.reset-btn').click(function() {
+  $('.timer-minutes').html(25);
+  $('.timer-seconds').html("00");
 })
 
 // Settings Modal 
