@@ -7,16 +7,24 @@ $('.tab span').click(function(e){
 // Timer 
 var minutes = 25;
 var seconds = "00";
+var isPaused = true;
 
 $('.timer-minutes').html(minutes);
 $('.timer-seconds').html(seconds);
 
 // Start the timer
-function toPauseBtn() {
-  $('#play-btn').removeClass('fa-play').addClass('fa-stop');
+function play() {
+  if(isPaused) {
+    timer();
+    $('#play-btn').removeClass('fa-play').addClass('fa-stop');
+  } else{
+    $('#play-btn').removeClass('fa-stop').addClass('fa-play');
+  }
 }
 
-function start() {
+function timer() {
+  isPaused = false;
+  
   minutes = 24;
   seconds = 59;
 
@@ -39,20 +47,14 @@ function start() {
       if (minutes < 1) {
         clearInterval(minutes_interval);
         clearInterval(seconds_interval);
+        isPaused = true;
       }
       seconds = 60;
     }
   }
 }
 
-  $('.play-btn').click(function(){
-      start();
-  });
-
-// Pause the timer
-function toStartBtn() {
-  $('#play-btn').removeClass('fa-stop').addClass('fa-play');
-}
+$('.play-btn').click(()=> {play()});
 
 // Reset the timer
 $('.reset-btn').click(function() {
