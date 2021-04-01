@@ -80,23 +80,29 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
 }
-
+/* 
 .timer-time {
     font-size: 9rem;
     font-weight: bold;
     color: var(--dark-grey);
-}
+} */
 
+.time-display {
+    font-size: 9rem;
+    color: var(--dark-grey);
+    font-weight: bold;
+}
 .progress-ring {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) rotate(-90deg);
 }
 
 .progress-ring-circle {
     transition: 0.5s;
     stroke: var(--blue);
+    
 }
 
 .timer-btn-container {

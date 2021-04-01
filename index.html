@@ -25,10 +25,16 @@
       
         <div class="timer-container">
             <div class="timer">
-                <div class="timer-time timer-minutes"></div>
+                <!-- <div class="timer-time timer-minutes"></div>
                 <div class="timer-time timer-colon">:</div>
-                <div class="timer-time timer-seconds"></div>
-                <audio src="bell.mp3"></audio>
+                <div class="timer-time timer-seconds"></div> -->
+                <h3 class="time-display">25:00</h3>
+                <audio class="bell">
+                    <source src="./sounds/bell.mp3">
+                </audio>
+                <audio class="song">
+                    <source src="./sounds/lofi.mp3">
+                </audio>
                 <svg class="progress-ring" width="450" height="450">
                     <circle class="progress-ring-circle"
                             stroke-width="12"
@@ -44,7 +50,7 @@
                 <div class="timer-btn play-btn" ><i id="play-btn" class="fas fa-play"></i></div>
                 <div class="timer-btn reset-btn"><i class="fas fa-redo"></i></div>
             <!-- <i class="fas fa-stop"></i> -->
-        </div>
+            </div>
                 
         </div>
        
@@ -62,9 +68,9 @@
             <div class="settings-time">
                 <h3 class="settings-heading">time (minutes)</h3>
                 <div class="settings-time-items">
-                    <div class="settings-time-item settings-time-pom"><label for="pomodoro">Pomodoro</label><input type="number" id="pomodoro" placeholder="25" value="25"></div>
-                    <div class="settings-time-item settings-time-shortbreak"><label for="shortbreak">Short Break</label><input type="number" id="shortbreak" placeholder="5" value="5"></div>
-                    <div class="settings-time-item settings-time-longbreak"><label for="longbreak">Long Break</label><input type="number" id="longbreak" placeholder="15" value="15"></div>
+                    <div class="settings-time-item settings-time-pom"><label for="pomodoro">Pomodoro</label><input type="number" id="pomodoro" placeholder="25" ></div>
+                    <div class="settings-time-item settings-time-shortbreak"><label for="shortbreak">Short Break</label><input type="number" id="shortbreak" placeholder="5" ></div>
+                    <div class="settings-time-item settings-time-longbreak"><label for="longbreak">Long Break</label><input type="number" id="longbreak" placeholder="15" ></div>
                 </div>    
             </div>
             <div class="settings-colors">
